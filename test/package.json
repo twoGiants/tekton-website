@@ -1,0 +1,22 @@
+{
+  "name": "tekton-docs",
+  "version": "1.0.0",
+  "description": "Tekton documentation",
+  "main": "none.js",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tektoncd/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tektoncd/website/issues"
+  },
+  "homepage": "https://tekton.dev/",
+  "devDependencies": {
+    "netlify-cli": "^19.1.4"
+  }
+}

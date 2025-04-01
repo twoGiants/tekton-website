@@ -1,0 +1,18 @@
+FROM hugomods/hugo:reg-exts-0.145.0
+
+RUN apk add gcc build-base python3-dev py3-pip
+
+COPY package.json package-lock.json /src/
+COPY requirements.txt /src/
+
+WORKDIR /src
+
+RUN git config --global --add safe.directory /src && \
+    npm install
+
+RUN python3 -m venv /src/.venv && \
+    /src/.venv/bin/pip3 install -r /src/requirements.txt
+
+COPY . /src
+
+ENTRYPOINT ["sh", "-c", "npm start"]
